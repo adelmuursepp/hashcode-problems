@@ -7,6 +7,3 @@ user_dict = {}
 first_line = f.readline().split(" ")
 contributors = int(first_line[0])
 projects = int(first_line[1])
-
-for line in f:
-    print("a")
