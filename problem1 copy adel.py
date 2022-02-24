@@ -36,14 +36,7 @@ for project in range(projects):
         role_name, required_skills = f.readline().split(" ")
         required_skills = int(required_skills)
         project_dict[project_name]["roles"][role_name] = required_skills
-i = 0
-while i < 100:
-    for project in project_dict:
-        total_days = project["best_before"] + i 
-        if total_days > project["best_before"]:
-            points = project["score_awarded"] - (total_days - project["best_before"])
         
-    i += 1 
 print("Projects")
 print(project_dict)
 print(user_dict)
