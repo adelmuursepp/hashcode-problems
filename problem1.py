@@ -1,4 +1,9 @@
-f = open("input_data/a_an_example.in.txt", "r")
+import os
+
+# code which gets the absolute path of the input_data directory
+dir_path = os.path.dirname(os.path.realpath(__file__))
+input_data_path = os.path.join(dir_path, 'input_data')
+f = open(f'{input_data_path}\\a_an_example.in.txt', "r")
 
 user_dict = {}
 
@@ -8,13 +13,5 @@ first_line = f.readline().split(" ")
 contributors = int(first_line[0])
 projects = int(first_line[1])
 
-for contributor in range(contributors):
-    user, skills = f.readline().split(" ")
-    skills = int(skills)
-    user_dict[user] = {}
-    for skill in range(skills):
-        skill_name, skill_level = f.readline().split()
-        skill_level = int(skill_level)
-        user_dict[user][skill_name] = skill_level
-
-print(user_dict)
+for line in f:
+    print("a")
