@@ -8,5 +8,13 @@ first_line = f.readline().split(" ")
 contributors = int(first_line[0])
 projects = int(first_line[1])
 
-for line in f:
-    print("a")
+for contributor in range(contributors):
+    user, skills = f.readline().split(" ")
+    skills = int(skills)
+    user_dict[user] = {}
+    for skill in range(skills):
+        skill_name, skill_level = f.readline().split()
+        skill_level = int(skill_level)
+        user_dict[user][skill_name] = skill_level
+
+print(user_dict)
