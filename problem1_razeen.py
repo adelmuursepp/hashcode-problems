@@ -12,10 +12,13 @@ for contributor in range(contributors):
     user, skills = f.readline().split(" ")
     skills = int(skills)
     user_dict[user] = {}
+    user_dict[user]['skills'] = {}
+    user_dict[user]['is_available'] = True
+    user_dict[user]['days_left'] = 0
     for skill in range(skills):
         skill_name, skill_level = f.readline().split()
         skill_level = int(skill_level)
-        user_dict[user][skill_name] = skill_level
+        user_dict[user]['skills'][skill_name] = skill_level
 
 
 project_dict = {}
@@ -37,8 +40,21 @@ for project in range(projects):
         role_name, required_skills = f.readline().split(" ")
         required_skills = int(required_skills)
         project_dict[project_name]["roles"][role_name] = required_skills
-  
-        
-    
+
 print(project_dict)
 print(user_dict)
+
+
+
+
+
+
+
+day_tracker = 0
+
+
+def is_available(user, day):
+    pass
+
+        
+    
