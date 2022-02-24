@@ -9,10 +9,4 @@ user_dict = {}
 
 # Read the first line. First integer is number of contributors. Second is number of projects
 # Save them as integers
-first_line = f.readline().split(" ")
-contributors = int(first_line[0])
-projects = int(first_line[1])
-<<<<<<< HEAD
-
-=======
->>>>>>> cb25c953e71246de93c49a2112a9ea1423af7509
+num_contributors, num_projects = [int(x) for x in f.readline().split()]
