@@ -11,4 +11,5 @@ user_dict = {}
 # Save them as integers
 first_line = f.readline().split(" ")
 contributors = int(first_line[0])
-projects = int(first_line[1]
+projects = int(first_line[1])
+
