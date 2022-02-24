@@ -18,3 +18,10 @@ for contributor in range(contributors):
         user_dict[user][skill_name] = skill_level
 
 print(user_dict)
+projects_we_can_take = 0
+
+# Writing the submission file. Open the file
+f = open("problem_a_output.txt", "w")
+# First line is how many projects we can take
+f.writeline(projects_we_can_take)
+f.close()
