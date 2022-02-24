@@ -55,7 +55,12 @@ def is_day_available(user, day):
     
 
 def relative_skill(user, project):
-    pass
+    relative_skill_tracker = {}
+    for skill in project['roles'].keys():
+        if skill in user['skills'].keys():
+            relative_skill_tracker[skill] = user['skills'][skill] - project['roles'][skill]
+    return relative_skill_tracker
+    
     
 
        
