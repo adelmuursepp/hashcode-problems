@@ -40,33 +40,36 @@ for project in range(projects):
         required_skills = int(required_skills)
         project_dict[project_name]["roles"][role_name] = required_skills
 
-<<<<<<< HEAD
 print(project_dict)
 print(user_dict)
-
-
-
-
-
-
 
 day_tracker = 0
 
-
-def is_available(user, day):
-    pass
-
-        
+def is_day_available(user, day):
+    if user['days_left'] == 0:
+        return True
+    days_till_day = day - day_tracker 
+    updated_days_left = user['days_left'] - days_till_day
+    return updated_days_left <= 0
     
-=======
-projects_we_can_take = 0
+    
 
-# Writing the submission file. Open the file
-f = open("problem_a_output.txt", "w")
-# First line is how many projects we can take
-f.writeline(projects_we_can_take)
-f.close()
+def relative_skill(user, project):
+    relative_skill_tracker = {}
+    for skill in project['roles'].keys():
+        if skill in user['skills'].keys():
+            relative_skill_tracker[skill] = user['skills'][skill] - project['roles'][skill]
+    return relative_skill_tracker
+    
+    
 
-print(project_dict)
-print(user_dict)
->>>>>>> f27942427afc92655a337d73542ead239fb6244e
+       
+    
+# projects_we_can_take = 0
+
+# # Writing the submission file. Open the file
+# f = open("problem_a_output.txt", "w")
+# # First line is how many projects we can take
+# f.writeline(projects_we_can_take)
+# f.close()
+
