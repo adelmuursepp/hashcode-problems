@@ -16,3 +16,28 @@ for contributor in range(contributors):
         skill_name, skill_level = f.readline().split()
         skill_level = int(skill_level)
         user_dict[user][skill_name] = skill_level
+
+project_dict = {}
+
+for project in range(projects):
+    project_name, days_required, score_awarded, best_before, num_roles = f.readline().split(" ")
+    days_required = int(days_required)
+    score_awarded = int(score_awarded)
+    best_before = int(best_before)
+    num_roles = int(num_roles)
+    project_dict[project_name] = {}
+    project_dict[project_name]["days_required"] = days_required
+    project_dict[project_name]["score_awarded"] = score_awarded
+    project_dict[project_name]["best_before"] = best_before
+    project_dict[project_name]["num_roles"] = num_roles
+    project_dict[project_name]["roles"] = {}
+
+    for role in range(num_roles):
+        role_name, required_skills = f.readline().split(" ")
+        required_skills = int(required_skills)
+        project_dict[project_name]["roles"][role_name] = required_skills
+
+print(project_dict)
+print(user_dict)
+
+
