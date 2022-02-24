@@ -20,7 +20,6 @@ for contributor in range(contributors):
         skill_level = int(skill_level)
         user_dict[user]['skills'][skill_name] = skill_level
 
-
 project_dict = {}
 
 for project in range(projects):
@@ -41,6 +40,7 @@ for project in range(projects):
         required_skills = int(required_skills)
         project_dict[project_name]["roles"][role_name] = required_skills
 
+<<<<<<< HEAD
 print(project_dict)
 print(user_dict)
 
@@ -58,3 +58,15 @@ def is_available(user, day):
 
         
     
+=======
+projects_we_can_take = 0
+
+# Writing the submission file. Open the file
+f = open("problem_a_output.txt", "w")
+# First line is how many projects we can take
+f.writeline(projects_we_can_take)
+f.close()
+
+print(project_dict)
+print(user_dict)
+>>>>>>> f27942427afc92655a337d73542ead239fb6244e
