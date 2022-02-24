@@ -8,5 +8,9 @@ first_line = f.readline().split(" ")
 contributors = int(first_line[0])
 projects = int(first_line[1])
 
-for line in f:
-    print("a")
+
+# Read the second line. First integer is number of projects. Second is number of skills
+# Save them as integers
+second_line = f.readline().split(" ")
+project_skills = int(second_line[0])
+skills = int(second_line[1])
