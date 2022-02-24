@@ -49,7 +49,16 @@ for project in range(projects):
         required_skills = int(required_skills)
         project_dict[project_name]["roles"][role_name] = required_skills
 
+day_tracker = 0
+
+
+def is_day_available(user, day):
+    if user['days_left'] == 0:
+        return True
+    days_till_day = day - day_tracker
+    updated_days_left = user['days_left'] - days_till_day
+    return updated_days_left <= 0
+
+
 print(project_dict)
 print(user_dict)
-
-
