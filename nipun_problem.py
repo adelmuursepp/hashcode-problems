@@ -12,3 +12,7 @@ user_dict = {}
 first_line = f.readline().split(" ")
 contributors = int(first_line[0])
 projects = int(first_line[1])
+<<<<<<< HEAD
+
+=======
+>>>>>>> cb25c953e71246de93c49a2112a9ea1423af7509
