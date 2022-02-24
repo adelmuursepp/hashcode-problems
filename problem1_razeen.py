@@ -40,7 +40,7 @@ for project in range(projects):
         required_skills = int(required_skills)
         project_dict[project_name]["roles"][role_name] = required_skills
 
-<<<<<<< HEAD
+
 print(project_dict)
 print(user_dict)
 
