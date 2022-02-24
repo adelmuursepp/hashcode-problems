@@ -52,13 +52,6 @@ print(user_dict)
 
 day_tracker = 0
 
-
-def is_available(user, day):
-    pass
-
-        
-    
-=======
 projects_we_can_take = 0
 
 # Writing the submission file. Open the file
@@ -69,4 +62,3 @@ f.close()
 
 print(project_dict)
 print(user_dict)
->>>>>>> f27942427afc92655a337d73542ead239fb6244e
